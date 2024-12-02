@@ -1,0 +1,129 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #4a90e2, #002f6c);
+    color: #fff;
+}
+
+header {
+    background-color: #002f6c;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Menu déroulant */
+nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #003b8b;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav.show {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+/* Contenu principal */
+main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+main h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Sections */
+.sections-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.section {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.section .button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #005bb5;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.section .button:hover {
+    background-color: #003f7f;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sections-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        width: 80%;
+    }
+}
